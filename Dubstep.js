@@ -22,7 +22,7 @@
 
 //Replaces all WUB with blank spaces
 function songDecoder(song) {
-    var replacedLyrics = song.replace(/WUB/g, ' ');
+    var replacedLyrics = song.replace(/(WUB)+/g,' ').trim();
     return replacedLyrics;
 }
-console.log(songDecoder("WUBWEWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB"));
+console.log(songDecoder("WUBWEWUBWUBAREWUBWUBTHEWUBCHAMPIONSWUBMYWUBFRIENDWUB"));
